@@ -29,7 +29,6 @@ services:
     container_name: securtest
     ports:
       - "80:80"
-      - "443:443"
     networks:
       - internal
       - web
@@ -39,12 +38,7 @@ services:
   shroombot:
     image: shroombot
     container_name: shroombot
-    environment:
-      API_ID: "${API_ID}"
-      API_HASH: "${API_HASH}"
-      BOT_TOKEN: "${BOT_TOKEN}"
-      ADMIN_CHAT: "${ADMIN_CHAT}"
-      ENCRYPTION_KEY: "${ENCRYPTION_KEY}"
+    env_file: ".env"
     volumes:
       - ./secret/mapping.bin:/mapping.bin
       - ./secret/.aiotdlib:/.aiotdlib
