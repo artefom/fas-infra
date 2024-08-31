@@ -16,6 +16,9 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    environment:
+      GF_SERVER_ROOT_URL: https://podosintovik.org/grafana
+      GF_SECURITY_ADMIN_PASSWORD: admin
     volumes:
       - grafana_data:/var/lib/grafana
     networks:
