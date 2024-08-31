@@ -30,6 +30,8 @@ services:
   securtest:
     image: securtest
     container_name: securtest
+    environment:
+      VITE_BOT_API: http://shroombot:8000
     networks:
       - internal
       - web
