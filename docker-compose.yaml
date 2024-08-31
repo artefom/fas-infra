@@ -6,7 +6,7 @@ services:
     image: prom/prometheus:latest
     container_name: prometheus
     volumes:
-      - ./secret/prometheus_data:/prometheus
+      - prometheus_data:/prometheus
       - ./prometheus.yaml:/etc/prometheus/prometheus.yml
     networks:
       - internal
@@ -17,7 +17,7 @@ services:
     image: grafana/grafana:latest
     container_name: grafana
     volumes:
-      - ./secret/grafana_data:/var/lib/grafana
+      - grafana_data:/var/lib/grafana
     networks:
       - internal
       - web
