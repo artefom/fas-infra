@@ -27,8 +27,6 @@ services:
   securtest:
     image: securtest
     container_name: securtest
-    ports:
-      - "80:80"
     networks:
       - internal
       - web
