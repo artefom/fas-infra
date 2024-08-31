@@ -7,7 +7,7 @@ services:
     container_name: prometheus
     volumes:
       - ./secret/prometheus_data:/prometheus
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
     networks:
       - internal
     restart: always
