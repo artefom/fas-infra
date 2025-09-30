@@ -49,6 +49,7 @@ services:
     volumes:
       - ./secret/mapping.bin:/mapping.bin
       - ./secret/.aiotdlib:/.aiotdlib
+      - ./secret/banned_users.csv:/banned_users.csv
     networks:
       - internal
       - web
