@@ -55,6 +55,14 @@ services:
       - web
     restart: always
 
+  # Thornwood (D&D companion app, static; image built by thornwood/scripts/deploy.sh)
+  thornwood:
+    image: thornwood
+    container_name: thornwood
+    networks:
+      - web
+    restart: always
+
   # Nginx Reverse Proxy
   nginx:
     image: nginx:latest
